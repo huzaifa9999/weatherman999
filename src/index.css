@@ -1,13 +1,102 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+ *{
+ box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+ }
+
+ body{
+  
+  font-family: 'Aboreto', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p{
+  font-size: 1.2rem;
 }
+h1{
+  font-size: 4rem;
+}
+.app{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  color: #ffff;
+  
+  
+}
+.app:before{
+  content: '';
+  background: url('weatherbg1.jpg') no-repeat center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0%;
+  z-index: -1;
+  
+}
+.cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-width: 500px;
+  height: 500px;
+   margin: auto; 
+  padding: 0 0.7rem;
+  position: relative;
+  top: 10%;
+
+  
+}
+
+.app .header{
+  width: 100%;
+  margin: 0.7rem auto;
+}
+.app .description{
+  position: relative;
+  right:-90%;
+  transform-origin: 0 0;
+}
+
+.app .footer{
+  display: flex;
+
+  justify-content: space-evenly;
+text-align: center;  
+width: 100%;
+  margin:  0.7rem auto;
+  padding: 0.7rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+}
+.app .search{
+  text-align: center;
+  padding: 0.7rem;
+}
+.app input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  color: #f8f8f8;
+}
+::placeholder{
+  color: #f8f8f8;
+}
+.icona{
+  height: 100px;
+  width: 100px;
+}
+/*<div className="icon">
+<img src={`http://openweathermap.org/img/w/${data.weather[0].icon}.png`} alt="icon"
+  className="icona" />
+
+
+</div>*/
+
